@@ -37,7 +37,7 @@ public class Employee {
         return 12 * getSalary();
     }
     public int getRaiseSalary() {
-        int raise = (int)(getAnnualSalary() * 0.10);
+        int raise = (int)((getAnnualSalary() * 0.10)+getAnnualSalary());
         return raise;
     }
 
@@ -54,5 +54,13 @@ public class Employee {
 
     public static void main(String[] args) {
         Employee obj = new Employee(10, "Santhosh", "K", 30000);
-        System.out.println(obj.toString());     }
+        System.out.println("Id:"+obj.getId());
+        System.out.println("FirstName:"+obj.getFirstName());    
+        System.out.println("LastName:"+obj.getLastName());    
+        System.out.println("Name:"+obj.getName());
+        System.out.println("Salary:"+obj.getSalary());
+        System.out.println("Annualsalary:"+obj.getAnnualSalary());
+        System.out.println("Raisesalary:"+obj.getRaiseSalary());
+        System.out.println(obj.toString());    
+        }
 }
